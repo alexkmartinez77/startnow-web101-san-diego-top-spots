@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>San Diego Top Spots</title>
+    <style>
+
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif
+
+        }
+
+        table th {
+            text-align: left;
+            background-color:#1079bb ;
+            color: #FFF;
+            padding: 8px 30px 8px 8px;
+        }
+
+        td
+        {
+            padding: 8px 30px 8px 0px;
+            font-size: 15px;
+        }
+
+        .column1{
+            width:25%;
+        }
+
+        .column2{
+            width:60%;
+        }
+        .column3{
+            width:15%;
+        }
+
+        
+        table tr{
+            border-bottom: 1px solid rgb(179, 179, 182);
+             border-top: 1px solid  rgb(179, 179, 182);
+            border-collapse: collapse;
+
+        }
+
+        table tr:nth-child(odd) td{
+            background-color: rgb(226, 236, 240);
+        }
+
+        .button {
+            font: bold 12px Arial;
+            text-decoration: none;
+            background-color: #1079bb;
+            color: #fdfdfd;
+            padding: 2px 6px 2px 6px;
+            border-top: 1px solid #CCCCCC;
+            border-right: 1px solid #333333;
+            border-bottom: 1px solid #333333;
+            border-left: 1px solid #CCCCCC;
+}
+        #map{
+            width: 100%;
+            height: 400px;
+            background-color: dimgrey;
+        }
+
+
+    </style>
+    
+</head>
+
+<body onLoad="initGeolocation();">
+    <!-- Write your markup here -->
+    <H1>San Diego Top Spots</H1>
+    <div id="map"></div>
+
+    <table class="top-spots-table">
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Link</th>
+        </tr>
+
+    </table>
+
+  <!-- <script>
+        function initMap() {
+          var uluru = {lat: -25.363, lng: 131.044};
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+          });
+          var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+          });
+        }
+      </script> -->
+
+    <!-- Don't forget to add your <script> tag here -->
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js" charset="utf-8"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDH415YN0Zo83xUmyf9D7XdWD6_9KcohFs&callback=initMap">
+    </script>
+</body>
+</html>
